@@ -1,13 +1,13 @@
 "use strict";
 (function () {
-  let person = {
-    firstName: `Chris`,
-    lastName: `Cooper`,
-    age: 17,
-    isAdult: function () {
-      return this.age >= 18;
-    },
-  };
+  function registerUser(fName, lName) {
+    let person = {
+      firstName: fName,
+      lastName: lName,
+    };
 
-  display(person.isAdult());
+    display(person);
+  }
+
+  registerUser(`Chris`, `Cooper`);
 })();

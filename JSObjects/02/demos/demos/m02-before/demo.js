@@ -13,6 +13,10 @@
     height: 55,
     weight: 155,
   };
-  Object.assign(person1, healthStats);
-  display(person1);
+  function mergeHealthStats(person, healthStats) {
+    return Object.assign(person, healthStats);
+  }
+
+  let mergedPerson = mergeHealthStats(person1, healthStats);
+  display(mergedPerson);
 })();

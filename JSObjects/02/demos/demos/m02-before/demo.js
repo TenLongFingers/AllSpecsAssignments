@@ -1,6 +1,6 @@
 "use strict";
 (function () {
-  let person = {
+  let person1 = {
     firstName: `Chris`,
     lastName: `Cooper`,
     age: 28,
@@ -9,8 +9,10 @@
     },
   };
 
-  for (let propertyName in person) {
-    display(propertyName);
-  }
-  display(Object.keys(person));
+  let healthStats = {
+    height: 55,
+    weight: 155,
+  };
+  Object.assign(person1, healthStats);
+  display(person1);
 })();

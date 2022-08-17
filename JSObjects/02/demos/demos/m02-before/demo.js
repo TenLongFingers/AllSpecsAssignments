@@ -14,9 +14,10 @@
     weight: 155,
   };
   function mergeHealthStats(person, healthStats) {
-    return Object.assign(person, healthStats);
+    return Object.assign({}, person, healthStats);
   }
 
   let mergedPerson = mergeHealthStats(person1, healthStats);
   display(mergedPerson);
+  display(person1);
 })();

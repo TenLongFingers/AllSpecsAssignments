@@ -1,7 +1,8 @@
-document.getElementById("mountNode").innerHTML = "Hello!";
-
 function Hello() {
-  return <div>Hello React!</div>;
+  return React.createElement("div", null, "Hello React!!!");
 }
 
-ReactDOM.render(<Hello />, document.getElementById("mountNode"));
+ReactDOM.render(
+  React.createElement(Hello, null),
+  document.getElementById("mountNode")
+);

@@ -16,7 +16,8 @@ class Counter extends Component {
     fontWeight: "bold",
   };
 
-  handleIncrement = () => {
+  handleIncrement = (product) => {
+    console.log(product);
     // this.state.count++;
     //This won't increment the count. The count IS changing, but it's not being shown on the webpage.
     //This next line is how you do it. It tells the page to update the displayed count.
@@ -32,7 +33,9 @@ class Counter extends Component {
           {this.formatCount()}
         </span>
         <button
-          onClick={this.handleIncrement}
+          onClick={() => {
+            this.handleIncrement({ id: 1 });
+          }}
           className="btn btn-secondary btn-sm"
         >
           Increment

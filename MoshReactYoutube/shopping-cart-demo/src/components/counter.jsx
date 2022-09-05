@@ -17,7 +17,10 @@ class Counter extends Component {
   };
 
   handleIncrement = () => {
-    console.log("Increment Clicked", this);
+    // this.state.count++;
+    //This won't increment the count. The count IS changing, but it's not being shown on the webpage.
+    //This next line is how you do it. It tells the page to update the displayed count.
+    this.setState({ count: this.state.count + 1 });
   };
 
   render() {
